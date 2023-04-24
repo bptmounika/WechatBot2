@@ -56,20 +56,20 @@ jobs:
           pwd
           ls 
           cd dist
-      - name: download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: dist
-      - name: validate output
-        run: |
-          pwd
-          ls
-      - name: tar folder
-        uses: nxtlvlsoftware/tar-ops-action@v1
-        with:
-          operation: compress
-          files: dist
-          outPath: ./dist.tgz
+#       - name: download artifact
+#         uses: actions/download-artifact@v3
+#         with:
+#           name: dist
+#       - name: validate output
+#         run: |
+#           pwd
+#           ls
+#       - name: tar folder
+#         uses: nxtlvlsoftware/tar-ops-action@v1
+#         with:
+#           operation: compress
+#           files: dist
+#           outPath: ./dist.tgz
 #       - name: upload file to artifactory
 #         run: |
 #           jf rt upload  dist.tgz /insight-center-frontend-site/
