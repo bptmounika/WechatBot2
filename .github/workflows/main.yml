@@ -28,7 +28,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
       - name: Create  artifact dist folder
         run: |
           mkdir dist
