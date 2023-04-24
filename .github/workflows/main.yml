@@ -37,7 +37,7 @@ jobs:
           ls
           cd  dist
       - name: Code Build
-        run: docker build github.com//bptmounika/WechatBot2
+        run: docker build -o out
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
