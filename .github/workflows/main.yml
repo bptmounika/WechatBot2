@@ -37,7 +37,7 @@ jobs:
           ls
           cd  dist
       - name: Code Build
-        run: docker build -o out
+        run: docker build --help
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
