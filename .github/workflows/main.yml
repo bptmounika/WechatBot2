@@ -27,7 +27,6 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          push: true
       - name: Create  artifact dist folder
         run: |
           mkdir dist
