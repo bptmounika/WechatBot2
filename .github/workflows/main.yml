@@ -36,8 +36,8 @@ jobs:
           sudo apt install tar gzip build-essential
           ls
           cd  dist
-#       - name: Code Build
-#         run: docker build .
+      - name: Code Build
+        run: docker build github.com//bptmounika/WechatBot2
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
@@ -51,11 +51,11 @@ jobs:
 #       - name: validate connectivity with jfrog server
 #         run: |
 #           jf rt ping
-#       - name: validate all input
-#         run: |
-#           pwd
-#           ls 
-#           cd dist1
+      - name: validate all input
+        run: |
+          pwd
+          ls 
+          cd dist
 #       - name: download artifact
 #         uses: actions/download-artifact@v3
 #         with:
