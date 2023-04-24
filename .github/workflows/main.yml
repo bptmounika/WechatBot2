@@ -34,7 +34,7 @@ jobs:
           sudo apt install tar gzip build-essential
           cd  dist
       - name: Code Build
-        run: docker build ./dist	  
+        run: docker build ./Dockerfile 
 #       - name: upload all aritifacts
 #         uses: actions/upload-artifact@v3
 #         with:
