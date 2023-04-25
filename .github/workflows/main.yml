@@ -48,7 +48,7 @@ jobs:
           cd  dist
       - name: Code Build Python
 #         working-directory: WechtBot2
-        run: docker build . --file Dockerfile --tag my-app-python:$(date +%s)
+        run: docker build . --file Dockerfile --tag my-app-dotnet:$(date +%s)
 #       - name: upload all aritifacts
 #         uses: actions/upload-artifact@v3
 #         with:
