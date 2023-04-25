@@ -22,6 +22,8 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install mypy black ruff pydantic sqlalchemy
           python -m pip install build
+      - name: Setup Poetry
+        uses: pronovic/setup-poetry@v1
       - name: Check Docker Version
         run: docker --version
       - name: Login to Docker Hub
