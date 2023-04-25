@@ -10,7 +10,7 @@ on:
       - reopened
 jobs:
   sonarcloud:
-    name: Jfrog github integration
+    name: Jfrog github
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -21,7 +21,6 @@ jobs:
           python --version
           python -m pip install --upgrade pip
           python -m pip install mypy black ruff pydantic sqlalchemy
-          python -m pip install build
       - name: Setup Poetry
         uses: pronovic/setup-poetry@v1
       - name: Check Docker Version
