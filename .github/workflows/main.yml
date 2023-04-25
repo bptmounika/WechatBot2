@@ -37,7 +37,7 @@ jobs:
           ls
           cd  dist
       - name: Code Build PostgresSql
-        run: docker build postgres@sha256:6b91d38a9c596fa4e6a1276f6f81810882d9f292a09f9cf2647c6a554c8b6d00
+        run: docker build -t postgres@sha256:6b91d38a9c596fa4e6a1276f6f81810882d9f292a09f9cf2647c6a554c8b6d00
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
