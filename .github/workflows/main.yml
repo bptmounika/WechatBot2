@@ -15,6 +15,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+      - name: Install dependencies
+        run: |
+          python --version
+          python -m pip install --upgrade pip
+          python -m pip install mypy black ruff pydantic sqlalchemy
+          python -m pip install build
       - name: Check Docker Version
         run: docker --version
       - name: Login to Docker Hub
@@ -37,7 +44,7 @@ jobs:
           ls
           cd  dist
       - name: Code Build PostgresSql
-        run: docker build -t postgres:latest # @sha256:6b91d38a9c596fa4e6a1276f6f81810882d9f292a09f9cf2647c6a554c8b6d00
+        run: docker build -t ./dist bptmounika/WechatBot2
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
