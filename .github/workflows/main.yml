@@ -44,7 +44,7 @@ jobs:
           ls
           cd  dist
       - name: Code Build PostgresSql
-        run: docker build -t ./dist bptmounika/WechatBot2
+        run: docker build
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
