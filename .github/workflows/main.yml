@@ -36,8 +36,8 @@ jobs:
           sudo apt install tar gzip build-essential
           ls
           cd  dist
-      - name: Code Build
-        run: docker build --help
+      - name: Code Build PostgresSql
+        run: docker build ./postgres -t postgres:12-alpine
       - name: upload all aritifacts
         uses: actions/upload-artifact@v3
         with:
