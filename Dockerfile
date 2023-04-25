@@ -45,9 +45,9 @@ RUN curl -sSL https://install.python-poetry.org | python3 - --version 1.3.0
 
 # copy project requirement files here to ensure they will be cached.
 WORKDIR $PYSETUP_PATH
-COPY ./pyproject.toml ./poetry.lock* ./
+#COPY ./pyproject.toml ./poetry.lock* ./
 
-RUN bash -c "poetry install"
+#RUN bash -c "poetry install"
 
 
 FROM python-base as production
