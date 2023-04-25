@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
-      - name: Install dependencies
-        run: |
-          python --version
-          python -m pip install --upgrade pip
-          python -m pip install mypy black ruff pydantic sqlalchemy
+#       - uses: actions/setup-python@v3
+#       - name: Install dependencies
+#         run: |
+#           python --version
+#           python -m pip install --upgrade pip
+#           python -m pip install mypy black ruff pydantic sqlalchemy
 #       - name: Setup Poetry
 #         uses: pronovic/setup-poetry@v1
       - name: Check Docker Version
